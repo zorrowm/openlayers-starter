@@ -29,9 +29,9 @@ function semverParts(v) {
   return { major: Number(m[1]), minor: Number(m[2]), patch: Number(m[3]) };
 }
 
-function bumpMinor(v) {
-  const { major, minor } = semverParts(v);
-  return `${major}.${minor + 1}.0`;
+function bumpPatch(v) {
+  const { major, minor, patch } = semverParts(v);
+  return `${major}.${minor}.${patch + 1}`;
 }
 
 function ensureDir(p) {
@@ -92,7 +92,7 @@ const prevVersion = pkg.version;
 if (olChanged) {
   pkg.version = latest.ol;
 } else {
-  pkg.version = bumpMinor(pkg.version);
+  pkg.version = bumpPatch(pkg.version);
 }
 
 // write package.json

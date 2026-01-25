@@ -6,7 +6,7 @@ Automated dependency update (scheduled job).
 - vite: 7.0.1 → 7.3.1
 
 ## Project version
-- 10.7.0 → 10.8.0
+- 10.7.0 → 10.7.1
 
 ## Checks
 - npm install: OK
